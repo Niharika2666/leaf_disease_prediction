@@ -9,10 +9,20 @@ import keras
 from tensorflow.keras.models import load_model
 
 # Use the proper endpoint name (usually 'serving_default')
+from fastapi.middleware.cors import CORSMiddleware
+
+
 
 
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # or restrict to ["http://localhost"] for better security
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 MODEL = load_model('./train/my_model.h5')
 
 

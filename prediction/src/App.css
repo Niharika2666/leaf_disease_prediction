@@ -1,0 +1,28 @@
+
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  text-align: center;
+  height: 100%;
+  background-color: white;
+}
+
+.app-header {
+  background-color: #b35c5c;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 50px);
+}
